@@ -1,0 +1,86 @@
+$font: 'Merriweather', serif;
+$bcolor: bisque;
+$fontcolor: rgb(3, 11, 150);
+$mybuttcolor: #f7786b;
+@mixin bradius5{
+    border-radius: .5em;
+    border: 1px solid rgb(126, 126, 255)
+}
+body {
+    background-color: $bcolor;
+}
+
+.mybutt {
+    display: block;
+    width: 6em;
+    font-size: 1.2em;
+    color: #ff8;
+    background: $mybuttcolor;
+    text-decoration: none;
+    font-style: oblique;
+    text-align: center;
+    padding: .2em .5em;
+    margin: .5em 0;
+    @include bradius5;
+}
+.b-icon {
+    background: url('../img/hot_plain_bread.svg') bottom left no-repeat;
+}
+.card {
+    @include bradius5;
+    background-color: #ffffff;
+    border-radius: -5px 10px 10 px;
+    padding: 1em;
+}
+.card2{
+    background-color: aliceblue;
+    @include bradius5;
+    padding: 1em;
+    box-shadow: -5px 10px 10px gray;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.stretch {
+    display: grid;
+    align-items: stretch;
+}
+.topmenu a {
+    display: block;
+    padding: .9em 1em;
+    color: #592550;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: left;
+}
+.topmenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0 0 .5em 0;
+    padding: 0;
+}
+@media screen and (min-width: 37.5em) {
+.topmenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row;
+    flex-flow: row;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+}
+@import 'layout', 'icomoon','socialButts';
